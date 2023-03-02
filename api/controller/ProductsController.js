@@ -15,7 +15,7 @@ module.exports.postProducts = async (req, res) => {
       title: req.body.title,
       description: req.body.description,
     });
-    res.status(200).json("thanh cong");
+    res.status(200).json("Success");
   } catch (err) {
     res.status(500).json(err);
   }
@@ -24,7 +24,7 @@ module.exports.postProducts = async (req, res) => {
 module.exports.deleteProducts = async (req, res) => {
   try {
     await ProductsModel.findByIdAndDelete({ _id: req.params.id });
-    res.status(200).json("thanh cong");
+    res.status(200).json("Success");
   } catch (err) {
     res.status(500).json(err);
   }
@@ -40,8 +40,8 @@ module.exports.patchProducts = async (req, res) => {
 
   try {
     await ProductsModel.findOneAndUpdate({ _id: req.params.id }, ObjectUser);
-    res.json("Success");
+    res.status(200).json("Success");
   } catch (err) {
-    res.json(err);
+    res.status(500).json(err);
   }
 };

@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const ProductsSchema = new mongoose.Schema({
   title: { type: String, require: true },
-  count: { type: Number, require: true, default: 0 },
   difficult: { type: String, require: true },
   description: { type: String, require: true },
   like: { type: Number, require: true, default: 0 },
