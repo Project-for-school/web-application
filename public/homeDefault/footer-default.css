@@ -76,3 +76,12 @@
 #newsletter1 {
     margin-right: 10px;
 }
+
+.list-unstyled li {
+    margin: 0 10px;
+}
+
+.icon-footer {
+    color: #fff;
+    font-size: 25px;
+}
