@@ -9,6 +9,8 @@
 
 #main {
     background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
+    overflow: hidden;
+    z-index: 2;
 }
 
 .bd-placeholder-img {
@@ -156,9 +158,10 @@
 }
 
 .scan {
-    z-index: 2;
+    z-index: 3;
     /* position: relative; */
     animation: animate-fullColor 2s linear infinite;
+    margin-left: 120px;
 }
 
 .face {
@@ -167,6 +170,8 @@
     height: 300px;
     background: url("../../public/images/dj1.jpg");
     background-size: 300px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
 .face::before {
@@ -218,14 +223,14 @@
     }
 }
 
-.sacn h3 {
+/* .sacn h3 {
     text-transform: uppercase;
     color: #3fefef;
     font-size: 2em;
     margin-top: 20px;
     letter-spacing: 2px;
     filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
-}
+} */
 
 .dots {
     position: absolute;
@@ -249,4 +254,179 @@
     100% {
         filter: hue-rotate(360deg);
     }
+}
+
+.explore-chapter-base {
+    /* padding-top: 200px; */
+}
+
+.bg-triangle {
+    /* position: absolute; */
+    background: url("../../public/images/bg-white.jpg");
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    width: 120%;
+    height: 650px;
+    margin-top: -426px;
+}
+
+.col-md-6 {
+    z-index: 2;
+}
+
+.base {
+    padding-top: 100px;
+}
+
+.base-title {
+    color: #1DA09C;
+    margin-bottom: 40px;
+}
+
+.base-content {
+    color: #919191;
+    line-height: 30px;
+}
+
+.base-link {
+    color: #1DA09C;
+    margin-top: 30px;
+}
+
+.base-link:hover {
+    text-decoration: none;
+}
+
+.cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.cube div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate-box 14s linear infinite;
+}
+
+@keyframes animate-box {
+    0% {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+
+    100% {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+}
+
+.cube .big span {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--clr);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+    transform-style: preserve-3d;
+    animation: animate-fullColor 6s ease-in-out infinite;
+}
+
+.cube:hover .big span {
+    background: transparent;
+    border: 10px solid rgb(255, 0, 68);
+    filter: drop-shadow(0 0 20px rgb(255, 0, 68));
+}
+
+.cube .big span.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube .big span.top::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-350px);
+    background-color: rgba(0, 0, 0, .5);
+    filter: blur(50px);
+}
+
+.cube2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 100%;
+    left: 53%;
+    transform: translate(-50%, -350px);
+}
+
+.cube2 div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate-box-2 14s linear infinite;
+    scale: 0.5;
+}
+
+@keyframes animate-box {
+    0% {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+
+    100% {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+}
+
+@keyframes animate-box-2 {
+    0% {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+
+.cube2 .big span {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--clr);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+    transform-style: preserve-3d;
+    animation: animate-fullColor 6s ease-in-out infinite;
+}
+
+.cube:hover~.cube2 .big span {
+    background: transparent;
+    border: 10px solid rgb(255, 132, 0);
+    filter: drop-shadow(0 0 20px rgb(255, 132, 0));
+}
+
+.cube2:hover .big span {
+    background: transparent;
+    border: 10px solid rgb(255, 132, 0);
+    filter: drop-shadow(0 0 20px rgb(255, 132, 0));
+}
+
+.cube2 .big span.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube2 .big span.top::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-350px);
+    /* background-color: rgba(0, 0, 0, .5); */
+    filter: blur(50px);
+}
+
+.explore-box {
+    margin-top: 5 0px;
+    padding-left: 200px;
 }

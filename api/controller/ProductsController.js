@@ -9,6 +9,16 @@ module.exports.getApiProducts = async (req, res) => {
   }
 };
 
+module.exports.searchProducts = async (req, res) => {
+  try {
+    const searchProduct = await ProductsModel.findOne({ _id: req.params.id });
+    res.json(searchProduct);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json("error");
+  }
+};
+
 module.exports.postProducts = async (req, res) => {
   try {
     await ProductsModel.create({

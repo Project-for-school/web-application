@@ -1,8 +1,11 @@
 const express = require("express");
 const router = express.Router();
+
 const controller = require("../controller/ProductsController");
 
 router.get("/products", controller.getApiProducts);
+
+router.get('/products/:id', controller.searchProducts)
 
 router.post("/products", controller.postProducts);
 

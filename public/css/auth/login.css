@@ -1,0 +1,123 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    background-color: #eceff1;
+}
+
+#main-chinh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none
+}
+
+.container {
+    text-align: center;
+    padding: 20px 30px;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+}
+
+img {
+    margin-bottom: 35px;
+}
+
+.modal-input {
+    padding: 8.9px 13px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sign-in {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+
+#btn-sign-in {
+    width: 100%;
+    background-color: #4c636e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+}
+
+#btn-sign-in:hover {
+    background-color: #546e7a;
+}
+
+.action {
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.forgot {
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sign-up {
+    float: right;
+    text-align: center;
+    cursor: pointer;
+}
+
+.info {
+    display: block;
+}
+
+.footer {
+    margin-top: 25px;
+    color: #546e7a;
+    display: inline-block;
+
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    font-size: 23px;
+
+}
+
+.ti-facebook {
+    background-color: #eceff1;
+    margin-right: 10px;
+
+}
+
+.ti-instagram {
+    background-color: #eceff1;
+    margin-right: 10px;
+}
+
+.ti-twitter {
+    background-color: #eceff1;
+    margin-right: 10px;
+}
+
+.ti-more {
+    background-color: #eceff1;
+    margin-right: 10px;
+}
+
+.info {
+    margin: 20px 0px;
+}
+
+p {
+    color: #cfcace;
+}
