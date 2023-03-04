@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 
-#main {
+#login {
     background-color: #eceff1;
 }
 
-#main-chinh {
+#login-main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,5 +119,5 @@ img {
 }
 
 p {
-    color: #cfcace;
+    color: #75757a;
 }
