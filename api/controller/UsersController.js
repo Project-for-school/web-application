@@ -11,6 +11,15 @@ const Authcontroller = {
     }
   },
 
+  getAUser: async (req, res) => {
+    try{
+      const aUser = await users.findOne({_id: req.params.id})
+      res.status(200).json(aUser)
+    }catch(err){
+      res.status(500).json(err)
+    }
+  },
+
   postLogin: async (req, res) => {
     try {
       const user = await users.findOne({ username: req.body.username });

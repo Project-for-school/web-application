@@ -1,4 +1,4 @@
-const user = require("../../models/UsersModel");
+const UsersModel = require("../../models/UsersModel");
 const bcrypt = require("bcrypt");
 
 const Authcontroller = {
@@ -8,23 +8,29 @@ const Authcontroller = {
 
   postLogin: async (req, res) => {
     try {
-        let errors = []
-      const user = await user.findOne({ username: req.body.username });
+      const user = await UsersModel.findOne({ username: req.body.username });
+
       if (!user) {
-        res.status(404).json("Wrong username");
+        res.render("../views/auth/login", {
+          errors: "Wrong username",
+          values: req.body
+        });
+        return;
       }
-      const Validpassword = await bcrypt.compare(
-        req.body.password,
-        user.password
-      );
+
+      const Validpassword = await bcrypt.compare(req.body.password, user.password);
+      
       if (!Validpassword) {
-        res.status(404).json("Wrong password");
+        res.render("../views/auth/login", {
+          errors: "Wrong password",
+          values: req.body
+        });
+        return;
       }
-      if (user && Validpassword) {
-        res.status(200).json(user);
-      }
+      
+      res.render("../views/auth/login");
     } catch (err) {
-      res.status(500).json(err);
+      res.status(500).json("loi");
     }
   },
 
@@ -36,7 +42,7 @@ const Authcontroller = {
     try {
       const salt = await bcrypt.genSalt(10);
       const hashed = await bcrypt.hash(req.body.password, salt);
-      const newUser = await user.create({
+      const newUser = await UsersModel.create({
         username: req.body.username,
         password: hashed,
         email: req.body.email,

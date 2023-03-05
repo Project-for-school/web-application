@@ -1,12 +1,14 @@
 extends ../layout/layoutInner
 
 block header_inner 
-    form.m-5(action="/auth/login/", method="POST")
+    form.m-5(action="/auth/login", method="POST")
+        if errors
+            .alert.alert-danger #{errors}
         .form-group
             label(for='name') User Name
-            input#name.form-control(name="name",type='text')
+            input#name.form-control(name="username",type='text', value=values ? values.username : '' )
         .form-group
             label(for='password') Password
-            input#password.form-control(name="password",type='password')
+            input#password.form-control(name="password",type='password', value=values ? values.password : '')
         button.btn.btn-primary(type='submit') Submit
 block footer_inner 
