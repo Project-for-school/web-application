@@ -17,10 +17,18 @@ html {
 }
 
 #main {
-    background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
+    /* background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important; */
     overflow: hidden;
     z-index: 2;
     /* background-image: linear-gradient(to right bottom, #00b3ff, RGBA(33, 37, 41, var(--bs-bg-opacity, 1))); */
+}
+
+body {
+    background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1));
+}
+
+body.active {
+    background-color: #fff !important;
 }
 
 #body {
@@ -29,27 +37,27 @@ html {
 
 #toggle {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 180px;
-    height: 80px;
+    top: 15px;
+    right: 15px;
+    width: 80px;
+    height: 37px;
     display: block;
-    background-color: #222;
+    background-color: #fff;
     border-radius: 100rem;
     margin: auto;
-    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
-        inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+        inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1); */
     transition: 0.5s;
     cursor: pointer;
 }
 
 #toggle .indicator {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+    top: 1px;
+    left: 1px;
+    width: 36px;
+    height: 34px;
+    background: linear-gradient(to bottom, #1fa4e0, #00b3ff);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 4px 4px rgba(255, 255, 255, 0.2), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
     border-radius: 100rem;
     transform: scale(0.9);
@@ -57,8 +65,8 @@ html {
 }
 
 #toggle.active .indicator {
-    left: 100px;
-    background: linear-gradient(to bottom, #444, #222);
+    left: 41px;
+    background: #fff;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 4px 4px rgba(255, 255, 255, 0.2), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
 }
 
@@ -67,7 +75,7 @@ body.active {
 }
 
 #toggle.active {
-    background-color: white;
+    background-color: #00b3ff;
     box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
         inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
 }
@@ -122,6 +130,21 @@ body.active {
 .sticky .btn-outline-light:hover {
     background-color: #00b3ff;
     color: #fff;
+}
+
+.sticky #toggle {
+    background-color: #000;
+}
+
+.sticky #toggle.active {
+    background-color: #00b3ff;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+        inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sticky #toggle.active .indicator {
+    background-color: #fff;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 4px 4px rgba(255, 255, 255, 0.2), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
 }
 
 .bd-placeholder-img {
@@ -315,7 +338,7 @@ h1 span:nth-child(7) {
 }
 
 .intro-chapter-base {
-    background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
+    /* background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important; */
     padding-top: 150px;
     padding-bottom: 160px;
 }
