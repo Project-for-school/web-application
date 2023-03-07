@@ -5,130 +5,76 @@
     box-sizing: border-box;
 }
 
-#login {
+.link-color {
+    color: #000;
+    font-weight: 470;
+}
+
+#wrapper-login {
+    height: 900px;
     background-color: #eceff1;
-    height: 700px;
-}
-
-#login-main {
-    padding-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container {
     text-align: center;
-    padding: 40px 30px;
-    padding-bottom: 33px;
-    width: 400px;
+    padding-top: 50px;
+}
+
+#login {
+    text-align: center;
+    padding: 40px 33px;
+    border-radius: 30px;
     background-color: #fff;
+    width: 400px;
+    margin: 0 auto;
     box-shadow: 0 0 10px rgb(0 0 0 / 8%);
 }
 
-img {
+#wrapper-login img {
     margin-bottom: 35px;
 }
 
-.modal-input {
-    padding: 8.9px 13px;
-    width: 100%;
+.form-control {
     margin-bottom: 20px;
 }
 
-.modal-input:hover {
+.form-control:hover {
     border-color: #000;
 }
 
-.sign-in {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 14px;
-}
-
-#btn-sign-in {
+.btn-primary {
+    margin-top: 20px;
     width: 100%;
-    background-color: #4c636e;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    align-items: center;
-}
-
-#btn-sign-in:hover {
-    background-color: #546e7a;
 }
 
 .action {
-    padding-top: 20px;
-    cursor: pointer;
-}
-
-.forgot {
-    float: left;
-    text-align: center;
-    cursor: pointer;
-}
-
-.sign-up {
-    float: right;
-    text-align: center;
-    cursor: pointer;
-}
-
-.info {
-    display: block;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer {
-    margin-top: 25px;
-    color: #546e7a;
-    display: inline-block;
-
+    padding-bottom: 33px;
 }
 
-.icon {
+.signin-with {
+    margin: 25px 80px;
+}
+
+.signin-with .or {
+    text-align: center;
+    text-decoration: overline #c2ccd2;
+    text-decoration: ;
+}
+
+.list-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 15px;
-    font-size: 23px;
-
 }
 
-.ti-facebook {
-    background-color: #eceff1;
-    margin-right: 10px;
-    cursor: pointer;
-
-}
-
-.ti-instagram {
-    background-color: #eceff1;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.ti-twitter {
-    background-color: #eceff1;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.ti-more {
-    background-color: #eceff1;
-    margin-right: 10px;
+.icon {
+    padding: 10px;
+    font-size: 25px;
     cursor: pointer;
 }
 
 .info {
-    margin: 20px 0px;
-}
-
-p {
-    color: #75757a;
+    text-align: center;
 }
