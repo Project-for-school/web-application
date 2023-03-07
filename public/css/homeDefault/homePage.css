@@ -31,6 +31,28 @@ body.active {
     background-color: #fff !important;
 }
 
+body.active #header {
+    background-color: #222;
+}
+
+.nav li a.active {
+    color: #000;
+}
+
+.nav-link.active {
+    color: #000;
+}
+
+body.active .intro-content,
+body.active .feature-content,
+body.active #developer p {
+    color: #222;
+}
+
+body.active .bowl {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 #body {
     margin-top: 74px;
 }
@@ -70,8 +92,8 @@ body.active {
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 4px 4px rgba(255, 255, 255, 0.2), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
 }
 
-body.active {
-    background-color: black;
+#toggle.acitve .nav li a {
+    color: #000;
 }
 
 #toggle.active {
@@ -145,6 +167,10 @@ body.active {
 .sticky #toggle.active .indicator {
     background-color: #fff;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 4px 4px rgba(255, 255, 255, 0.2), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+}
+
+.sticky #toggle {
+    display: none;
 }
 
 .bd-placeholder-img {
@@ -556,7 +582,7 @@ h1 span:nth-child(7) {
 .base-link {
     color: #00b3ff;
     margin-top: 30px;
-    text-shadow: 1px 1px black;
+    /* text-shadow: 1px 1px black; */
 }
 
 .base-link:hover {
