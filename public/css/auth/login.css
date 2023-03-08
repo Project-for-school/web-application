@@ -70,11 +70,15 @@
 
 .icon {
     margin: 12px;
-    padding: px;
+    padding: 8px;
     font-size: 25px;
     cursor: pointer;
     background-color: #ddd;
     border-radius: 50%;
+}
+
+.icon:hover {
+    background-color: #87a1bc;
 }
 
 .info {
