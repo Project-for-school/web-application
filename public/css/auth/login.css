@@ -60,7 +60,6 @@
 .signin-with .or {
     text-align: center;
     text-decoration: overline #c2ccd2;
-    text-decoration: ;
 }
 
 .list-icon {
@@ -70,9 +69,12 @@
 }
 
 .icon {
-    padding: 10px;
+    margin: 12px;
+    padding: px;
     font-size: 25px;
     cursor: pointer;
+    background-color: #ddd;
+    border-radius: 50%;
 }
 
 .info {
