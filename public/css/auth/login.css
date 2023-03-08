@@ -11,10 +11,7 @@
 }
 
 #wrapper-login {
-    height: 900px;
-    background-color: #eceff1;
-    text-align: center;
-    padding-top: 50px;
+
 }
 
 #login {
@@ -23,7 +20,7 @@
     border-radius: 30px;
     background-color: #fff;
     width: 400px;
-    margin: 0 auto;
+    margin: 53px auto;
     box-shadow: 0 0 10px rgb(0 0 0 / 8%);
 }
 
