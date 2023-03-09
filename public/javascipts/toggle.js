@@ -18,5 +18,4 @@ toggle.onclick = () => {
     featureContent.classList.toggle('active');
     developerContent.classList.toggle('active');
     bowlElement.classList.toggle('active');
-
 }
