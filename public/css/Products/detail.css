@@ -1,0 +1,200 @@
+.tab-content .tab-pane:nth-child(1) {
+  padding: 0 50px;
+}
+.tab-content .tab-content-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tab-content-like {
+  position: relative;
+}
+.tab-content-like:hover .feed-back {
+  display: flex;
+}
+.feed-back {
+  position: absolute;
+  display: none;
+  background-color: white;
+  min-width: 50px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  top: 15px;
+}
+.feed-back {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  display: none;
+  top: 35px;
+  right: -46px;
+}
+.feed-back::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -20px;
+  width: 140px;
+  height: 50px;
+}
+.feed-back i {
+  margin-right: 6px;
+}
+.tab-content-difficult .tab-content-like {
+  background-color: white;
+  color: black;
+}
+.tab-content-heading .tab-content-like {
+  padding: 2px 4px;
+}
+.tab-content-like:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+.tab-content .tab-conent-info {
+  font-size: 16px;
+}
+.tab-content .answer {
+  width: 100%;
+  background-color: #f7f7f8;
+  padding: 20px;
+}
+.tab-content-description .content-tab-example {
+  margin-top: 20px;
+}
+.tab-content-constraint {
+}
+.tab-content-constraint .constraint-list {
+  list-style-type: disc;
+  padding: 20px;
+}
+.progess-text {
+  margin-top: 20px;
+  display: flex;
+}
+.progess-text .progess-text-p {
+  padding-right: 30px;
+  position: relative;
+}
+.progess-text .separate::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 14px;
+  background-color: grey;
+  top: 0;
+  right: 12px;
+  margin-top: 4px;
+}
+.card .btn {
+  color: #818484;
+}
+.similar-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+.similar-question a {
+  color: black;
+  font-weight: 400;
+}
+.similar-question:hover a {
+  color: #3b9aff;
+  text-decoration: none;
+}
+.related-topic a {
+  border-radius: 10px;
+  background-color: #f2f3f4;
+  color: black;
+  opacity: 0.6;
+}
+.comment-area-bottom .comment-area-type {
+  color: #3b9aff;
+  background-color: white;
+  border: none;
+  margin-top: 6px;
+}
+.comment-submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment-area-bottom-icon i {
+  padding: 6px 12px;
+}
+.area-bottom-icon:hover {
+  cursor: pointer;
+  background-color: #f2f3f4;
+}
+.comment-submit .btn {
+  color: white;
+  border-radius: 12px;
+}
+.comment-area {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.tab-pane .card {
+  border: none;
+}
+.solution-tittle {
+  color: black;
+  font-weight: 500;
+}
+.solution-author {
+  color: #818484;
+}
+.solution-number {
+  color: #818484;
+}
+.tab-pane .flex-row {
+  margin: 40px 0;
+}
+.solution-heading-search {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+.solution-heading-search .form-control {
+  background-color: #f2f3f4;
+}
+
+.solution-heading-search .btn {
+  margin: 14px;
+  border: none;
+  color: white;
+}
+.dropdown .btn-secondary {
+  background-color: #f2f3f4;
+  color: black;
+}
+.tab-pane .submision {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submision .submision-heading {
+  text-align: center;
+}
+.submision .submissions-description {
+  text-align: center;
+}
+.submision {
+  height: 50vh;
+  width: 100%;
+}
+.submision .submission-btn {
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .row-mb {
+    width: 100vh;
+  }
+}
